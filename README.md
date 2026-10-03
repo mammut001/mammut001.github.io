@@ -1,6 +1,6 @@
 # Dogether website
 
-Marketing site for Dogether. English and Chinese. Static export via `next build`.
+Marketing site for Dogether, published at https://mammut001.github.io. English and Chinese. Static export via `next build`.
 
 - `/en/` and `/zh/` — home
 - `/en/privacy/` and `/zh/privacy/` — privacy policy

@@ -8,7 +8,7 @@ export function asset(path: string) {
   return `${BASE_PATH}${clean}`;
 }
 
-/** Project site on GitHub Pages: https://mammut001.github.io/dogether-website */
+/** User site: https://mammut001.github.io */
 export const SITE_URL = `https://mammut001.github.io${BASE_PATH}`;
 
 export function localeAlternates(lang: Locale, subpath = "") {
