@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fdfbf8;
+  color: #1e1b18;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #ffe4d1;
+  color: #7a3a24;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  background: #d9764a;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #c46538;
+  transform: translateY(-1px);
+}
