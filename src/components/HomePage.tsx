@@ -37,6 +37,23 @@ export default function HomePage({ dict }: { dict: Dictionary }) {
         </div>
       </section>
 
+      <section id="templates" className="px-6 py-16">
+        <div className="max-w-content mx-auto">
+          <p className="text-sm text-brand">{dict.templates.kicker}</p>
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight">{dict.templates.title}</h2>
+          <p className="mt-3 max-w-2xl text-sm text-muted leading-relaxed">{dict.templates.intro}</p>
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {dict.templates.items.map((item) => (
+              <article key={item.name} className="rounded-2xl border border-line bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-brand">{item.name}</p>
+                <h3 className="mt-2 font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm text-muted leading-relaxed">{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="features" className="px-6 py-16 bg-white border-y border-line">
         <div className="max-w-content mx-auto">
           <p className="text-sm text-brand">{dict.features.kicker}</p>
