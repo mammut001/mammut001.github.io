@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { asset } from "@/lib/site";
 import type { Dictionary } from "@/dictionaries/en";
 
 export default function HomePage({ dict }: { dict: Dictionary }) {
@@ -33,7 +35,9 @@ export default function HomePage({ dict }: { dict: Dictionary }) {
               ))}
             </ul>
           </div>
-          <PhonePlaceholder label={dict.gallery.caption} />
+          <div className="mx-auto w-full max-w-[280px] rounded-[36px] bg-ink p-2 shadow-xl">
+            <Image src={asset("/screenshots/01-together-home.png")} alt={dict.gallery.captions[0]} width={1320} height={2868} priority className="h-auto w-full rounded-[28px]" />
+          </div>
         </div>
       </section>
 
@@ -91,15 +95,11 @@ export default function HomePage({ dict }: { dict: Dictionary }) {
           <h2 className="mt-2 text-3xl font-semibold tracking-tight">{dict.gallery.title}</h2>
           <p className="mt-2 text-sm text-muted">{dict.gallery.note}</p>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {["01", "02", "03", "04"].map((n) => (
-              <div
-                key={n}
-                className="aspect-[9/16] rounded-[28px] border border-dashed border-[#E0C8B4] bg-white/70 flex items-end p-4"
-              >
-                <span className="text-xs text-muted">
-                  {dict.gallery.caption} {n}
-                </span>
-              </div>
+            {["01-together-home", "02-plan-detail", "03-activity", "04-privacy"].map((name, index) => (
+              <figure key={name} className="overflow-hidden rounded-[28px] border border-line bg-white p-2">
+                <Image src={asset(`/screenshots/${name}.png`)} alt={dict.gallery.captions[index]} width={1320} height={2868} className="h-auto w-full rounded-[20px]" />
+                <figcaption className="p-3 text-sm text-muted">{dict.gallery.captions[index]}</figcaption>
+              </figure>
             ))}
           </div>
         </div>
@@ -113,25 +113,5 @@ export default function HomePage({ dict }: { dict: Dictionary }) {
         </div>
       </section>
     </>
-  );
-}
-
-function PhonePlaceholder({ label }: { label: string }) {
-  return (
-    <div className="mx-auto w-[280px] rounded-[36px] bg-ink p-2 shadow-xl">
-      <div className="rounded-[28px] bg-paper h-[520px] p-5 flex flex-col">
-        <div className="text-xs text-muted">2:33</div>
-        <div className="mt-4 text-2xl font-semibold">Together</div>
-        <div className="mt-4 rounded-2xl bg-[#E8F3E8] border border-[#D4E8D4] p-4 flex-1">
-          <div className="text-sm font-semibold">Weekend Grocery Run</div>
-          <ul className="mt-3 space-y-2 text-sm text-muted">
-            <li>Oat milk</li>
-            <li>Fresh berries</li>
-            <li>Road-trip snacks</li>
-          </ul>
-        </div>
-        <p className="mt-3 text-center text-[11px] text-muted">{label}</p>
-      </div>
-    </div>
   );
 }

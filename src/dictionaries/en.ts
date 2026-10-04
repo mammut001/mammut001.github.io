@@ -108,13 +108,13 @@ export const en = {
   gallery: {
     kicker: "Screens",
     title: "Screenshots",
-    note: "App screenshots will go here. This frame is a placeholder.",
-    caption: "Placeholder",
+    note: "See your plans, tasks, activity, and privacy controls on iPhone.",
+    captions: ["Together", "Plan details", "Activity", "Privacy"],
   },
   download: {
     title: "On the App Store soon",
-    body: "The listing is not live yet. The download button is a placeholder until the App Store URL exists.",
-    button: "Download on the App Store",
+    body: "Dogether is being prepared for iPhone and iPad. Start with three saved plans for free; a one-time purchase unlocks unlimited plans. Archived plans count toward the free limit.",
+    button: "Coming soon to the App Store",
   },
   footer: {
     blurb:
@@ -138,6 +138,14 @@ export const en = {
         p: "Plans, tasks, notes, assignments, activity, and your display name are stored on your device. When you use iCloud, they also live in your private CloudKit database. When you share a plan, that plan’s tasks, display names, and activity are visible to the people you invite through Apple’s shared iCloud database. Dogether does not receive a copy of that content on a developer server.",
       },
       {
+        h: "Home Screen widget",
+        p: "The widget reads a local App Group snapshot that can include plan titles, schedules, progress, collaborator names, and open task titles.",
+      },
+      {
+        h: "Purchases",
+        p: "Apple processes purchases through StoreKit. Dogether verifies entitlements and caches the unlock state locally. The app does not receive payment card details.",
+      },
+      {
         h: "What we do not collect",
         p: "The app does not include analytics, advertising, or tracking SDKs. It does not ask you to create a Dogether account. We do not sell personal information.",
       },
@@ -147,7 +155,7 @@ export const en = {
       },
       {
         h: "Your choices",
-        p: "You can view and delete plans in the app. You can stop sharing from the plan. Removing the app deletes the on-device copy; iCloud data follows Apple’s iCloud controls for your account.",
+        p: "Deleting a plan you own requests its removal from this device and from its CloudKit zone. Shared collaborators and Apple retention may affect remaining copies. Uninstalling the app does not necessarily delete your iCloud data.",
       },
       {
         h: "This website",
@@ -176,11 +184,16 @@ export const en = {
         p: "You can keep editing without a network. Changes sync when that device can reach iCloud again.",
       },
       {
+        h: "Purchases and restoration",
+        p: "Three saved plans are free, including archived plans. Unlimited plans is a one-time purchase. Restore purchases from Settings or the purchase screen using the Apple ID that bought it. If the price is unavailable, Check App Store price retries without making a purchase.",
+      },
+      {
         h: "Privacy questions",
-        p: "Read the Privacy Policy. It is the same page linked from the app.",
+        p: "Read the Privacy Policy. The in-app privacy notice is also available in Settings.",
       },
     ],
-    contact: "App Store link is not live yet. For now, product questions can go through the developer’s GitHub: mammut001/dogether.",
+    contactLink: "Contact via GitHub Issues",
+    contact: "For product questions or bug reports, open an issue in the developer’s GitHub repository.",
   },
 };
 
