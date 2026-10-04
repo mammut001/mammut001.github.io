@@ -28,6 +28,7 @@ export default async function SupportPage({ params }: { params: { lang: Locale }
         </section>
       ))}
       <p className="text-muted leading-relaxed">{dict.support.contact}</p>
+      <a href="https://github.com/mammut001/dogether/issues" className="inline-flex text-brand-deep underline underline-offset-4">{dict.support.contactLink}</a>
     </LegalPage>
   );
 }

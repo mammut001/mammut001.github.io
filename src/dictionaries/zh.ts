@@ -110,13 +110,13 @@ export const zh: Dictionary = {
   gallery: {
     kicker: "界面",
     title: "截图",
-    note: "正式截图会放在这里。这一格是占位。",
-    caption: "占位",
+    note: "在 iPhone 上查看计划、任务、动态与隐私设置。",
+    captions: ["Together 首页", "计划详情", "动态", "隐私"],
   },
   download: {
     title: "即将上架 App Store",
-    body: "商店页面还没上线。在有正式链接之前，下载按钮是占位。",
-    button: "在 App Store 下载",
+    body: "Dogether 正在准备上架 iPhone 和 iPad。三份已保存计划免费，一次性购买可解锁无限计划；归档计划也计入免费额度。",
+    button: "即将上架 App Store",
   },
   footer: {
     blurb: "本地优先的共享计划应用。离线可用，邀请别人时通过 iCloud 同步。",
@@ -139,6 +139,14 @@ export const zh: Dictionary = {
         p: "计划、任务、备注、分配、动态和显示名称保存在你的设备上。使用 iCloud 时，它们也在你的私人 CloudKit 数据库里。分享某份计划后，被邀请的人可以通过 Apple 的共享 iCloud 看到这份计划的任务、显示名称和动态。Dogether 不会在开发者服务器上收到一份副本。",
       },
       {
+        h: "主屏幕小组件",
+        p: "小组件读取本机 App Group 快照，其中可能包含计划标题、时间、进度、协作者名称和未完成任务标题。",
+      },
+      {
+        h: "购买",
+        p: "Apple 通过 StoreKit 处理购买。Dogether 验证购买权益并在本机缓存解锁状态。App 不会收到支付卡信息。",
+      },
+      {
         h: "我们不收集的内容",
         p: "App 不含分析、广告或追踪 SDK，也不要求创建 Dogether 账号。我们不出售个人信息。",
       },
@@ -148,7 +156,7 @@ export const zh: Dictionary = {
       },
       {
         h: "你可以做什么",
-        p: "你可以在 App 里查看和删除计划，也可以停止分享。删除 App 会去掉设备上的副本；iCloud 中的数据遵循 Apple 对你账号的 iCloud 控制。",
+        p: "删除自己拥有的计划会请求移除本机内容及对应 CloudKit 区域。共享协作者和 Apple 的保留策略可能影响剩余副本。卸载 App 不一定会删除 iCloud 中的数据。",
       },
       {
         h: "这个网站",
@@ -177,10 +185,15 @@ export const zh: Dictionary = {
         p: "没有网络也可以继续改。设备再次连上 iCloud 后会同步。",
       },
       {
+        h: "购买与恢复",
+        p: "三份已保存计划免费，归档计划也计入额度。无限计划为一次性购买。使用购买时的 Apple ID，在设置或购买页面选择恢复购买。价格暂不可用时，检查 App Store 价格只会重新加载价格，不会发起购买。",
+      },
+      {
         h: "隐私问题",
-        p: "请阅读隐私政策。App 里的链接指向同一页。",
+        p: "请阅读隐私政策。App 内的隐私说明也可在设置中查看。",
       },
     ],
-    contact: "App Store 链接还没上线。产品问题可以先通过开发者的 GitHub：mammut001/dogether。",
+    contactLink: "通过 GitHub Issues 联系",
+    contact: "产品问题或错误报告可通过开发者 GitHub 仓库的 Issues 提交。",
   },
 };
