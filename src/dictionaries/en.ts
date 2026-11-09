@@ -124,6 +124,8 @@ export const en = {
     privacy: "Privacy Policy",
     supportLink: "Support",
     copyright: "© 2026 Dogether",
+    more: "Also by the developer",
+    parlemiao: "Parlemiao: learn French and prepare for the TCF Canada",
   },
   privacy: {
     title: "Privacy Policy",

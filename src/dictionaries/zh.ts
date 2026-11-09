@@ -125,6 +125,8 @@ export const zh: Dictionary = {
     privacy: "隐私政策",
     supportLink: "支持",
     copyright: "© 2026 Dogether",
+    more: "同一开发者的其他作品",
+    parlemiao: "Parlemiao 喵说法语：法语学习与 TCF Canada 备考",
   },
   privacy: {
     title: "隐私政策",

@@ -5,7 +5,7 @@ import { asset, type Locale } from "@/lib/site";
 export default function Footer({ dict, lang }: { dict: Dictionary["footer"]; lang: Locale }) {
   return (
     <footer className="bg-ink text-white">
-      <div className="max-w-content mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
+      <div className="max-w-content mx-auto px-6 py-12 grid md:grid-cols-4 gap-8">
         <div>
           <div className="flex items-center gap-2 font-semibold">
             <img src={asset("/icon.png")} alt="" width={28} height={28} className="w-7 h-7 rounded-md" />
@@ -40,6 +40,16 @@ export default function Footer({ dict, lang }: { dict: Dictionary["footer"]; lan
               <Link href={`/${lang}/support/`} className="hover:text-white">
                 {dict.supportLink}
               </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-xs uppercase tracking-wider text-white/40">{dict.more}</h2>
+          <ul className="mt-3 space-y-2 text-sm text-white/70">
+            <li>
+              <a href="https://french.paytonpei.top/" className="hover:text-white">
+                {dict.parlemiao}
+              </a>
             </li>
           </ul>
         </div>
