@@ -17,7 +17,7 @@ export const en = {
     accent: "gently.",
     body: "Groceries, trips, moving day, study weeks — keep a plan in one calm place instead of scattered messages. Works offline. Syncs through iCloud.",
     download: "App Store",
-    downloadNote: "Coming soon",
+    downloadNote: "Download now",
     how: "How it works",
     chips: ["No account", "Private iCloud sharing", "Works offline"],
   },
@@ -112,9 +112,9 @@ export const en = {
     captions: ["Together", "Plan details", "Activity", "Privacy"],
   },
   download: {
-    title: "On the App Store soon",
-    body: "Dogether is being prepared for iPhone and iPad. Start with three saved plans for free; a one-time purchase unlocks unlimited plans. Archived plans count toward the free limit.",
-    button: "Coming soon to the App Store",
+    title: "Get Dogether on the App Store",
+    body: "Dogether is available for iPhone and iPad. Start with three saved plans for free; a one-time purchase unlocks unlimited plans. Archived plans count toward the free limit.",
+    button: "Download on the App Store",
   },
   footer: {
     blurb:
@@ -129,7 +129,7 @@ export const en = {
   },
   privacy: {
     title: "Privacy Policy",
-    updated: "Last updated October 3, 2026",
+    updated: "Last updated November 21, 2026",
     sections: [
       {
         h: "Who this covers",
@@ -140,8 +140,8 @@ export const en = {
         p: "Plans, tasks, notes, assignments, activity, and your display name are stored on your device. When you use iCloud, they also live in your private CloudKit database. When you share a plan, that plan’s tasks, display names, and activity are visible to the people you invite through Apple’s shared iCloud database. Dogether does not receive a copy of that content on a developer server.",
       },
       {
-        h: "Home Screen widget",
-        p: "The widget reads a local App Group snapshot that can include plan titles, schedules, progress, collaborator names, and open task titles.",
+        h: "Home Screen and Lock Screen widgets",
+        p: "Widgets read a local App Group snapshot on your device that can include plan titles, schedules, progress, collaborator names, open task titles, and tasks assigned to you with who assigned them.",
       },
       {
         h: "Purchases",

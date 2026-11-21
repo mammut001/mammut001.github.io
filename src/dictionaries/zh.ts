@@ -19,7 +19,7 @@ export const zh: Dictionary = {
     accent: "轻轻地。",
     body: "买菜、旅行、搬家、复习周——把计划放在一个安静的地方，而不是散落在聊天记录里。离线可用，通过 iCloud 同步。",
     download: "App Store",
-    downloadNote: "即将上架",
+    downloadNote: "立即下载",
     how: "怎么用",
     chips: ["不需要账号", "通过 iCloud 私下分享", "离线可用"],
   },
@@ -114,9 +114,9 @@ export const zh: Dictionary = {
     captions: ["Together 首页", "计划详情", "动态", "隐私"],
   },
   download: {
-    title: "即将上架 App Store",
-    body: "Dogether 正在准备上架 iPhone 和 iPad。三份已保存计划免费，一次性购买可解锁无限计划；归档计划也计入免费额度。",
-    button: "即将上架 App Store",
+    title: "在 App Store 下载 Dogether",
+    body: "Dogether 已上架 iPhone 和 iPad。三份已保存计划免费，一次性购买可解锁无限计划；归档计划也计入免费额度。",
+    button: "前往 App Store 下载",
   },
   footer: {
     blurb: "本地优先的共享计划应用。离线可用，邀请别人时通过 iCloud 同步。",
@@ -130,7 +130,7 @@ export const zh: Dictionary = {
   },
   privacy: {
     title: "隐私政策",
-    updated: "最近更新：2026 年 10 月 3 日",
+    updated: "最近更新：2026 年 11 月 21 日",
     sections: [
       {
         h: "适用范围",
@@ -141,8 +141,8 @@ export const zh: Dictionary = {
         p: "计划、任务、备注、分配、动态和显示名称保存在你的设备上。使用 iCloud 时，它们也在你的私人 CloudKit 数据库里。分享某份计划后，被邀请的人可以通过 Apple 的共享 iCloud 看到这份计划的任务、显示名称和动态。Dogether 不会在开发者服务器上收到一份副本。",
       },
       {
-        h: "主屏幕小组件",
-        p: "小组件读取本机 App Group 快照，其中可能包含计划标题、时间、进度、协作者名称和未完成任务标题。",
+        h: "主屏幕和锁定屏幕小组件",
+        p: "小组件读取本机 App Group 快照，其中可能包含计划标题、时间、进度、协作者名称、未完成任务标题，以及指派给你的任务和指派人。",
       },
       {
         h: "购买",
