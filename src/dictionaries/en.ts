@@ -23,14 +23,19 @@ export const en = {
   },
   templates: {
     kicker: "Templates",
-    title: "Five ways a plan can behave.",
+    title: "Six ways a plan can behave.",
     intro:
-      "Grocery, Study, Trip, Moving, and General use the same plan and tasks. The template changes ordering and what you see first. It does not create a separate kind of data.",
+      "Grocery, Family, Study, Trip, Moving, and General use the same plan and tasks. The template changes ordering and what you see first. It does not create a separate kind of data.",
     items: [
       {
         name: "Grocery",
         title: "Quantity first",
         body: "Suggested for a shared shopping list. Quantity and unit come before dates. You keep manual order, and checking items off stays the fast path.",
+      },
+      {
+        name: "Family",
+        title: "Who’s doing what today",
+        body: "School runs, chores, dinner. Today shows each task with who has it and when; type “pick up the kids @Mia 3:30pm” and it lands on Mia’s list with a heads-up.",
       },
       {
         name: "Study",
