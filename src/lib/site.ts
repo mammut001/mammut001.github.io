@@ -21,3 +21,6 @@ export function localeAlternates(lang: Locale, subpath = "") {
     },
   };
 }
+
+/** Dogether on the App Store (bundle dongpei.dogether, Apple ID 6804425374). */
+export const APP_STORE_URL = "https://apps.apple.com/app/id6804425374";

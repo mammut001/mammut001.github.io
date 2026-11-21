@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { asset } from "@/lib/site";
+import { APP_STORE_URL, asset } from "@/lib/site";
 import type { Dictionary } from "@/dictionaries/en";
 
 export default function HomePage({ dict }: { dict: Dictionary }) {
@@ -19,7 +19,7 @@ export default function HomePage({ dict }: { dict: Dictionary }) {
             </h1>
             <p className="mt-5 text-lg text-muted max-w-md leading-relaxed">{dict.hero.body}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#download" className="btn-primary">
+              <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 {dict.hero.download}
                 <span className="text-white/80 font-medium text-xs">{dict.hero.downloadNote}</span>
               </a>
@@ -109,7 +109,14 @@ export default function HomePage({ dict }: { dict: Dictionary }) {
         <div className="max-w-content mx-auto rounded-3xl bg-ink text-white px-8 py-12">
           <h2 className="text-3xl font-semibold tracking-tight">{dict.download.title}</h2>
           <p className="mt-3 text-white/60 max-w-lg">{dict.download.body}</p>
-          <span className="mt-6 inline-flex btn-primary opacity-80 cursor-default">{dict.download.button}</span>
+          <a
+            href={APP_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex btn-primary"
+          >
+            {dict.download.button}
+          </a>
         </div>
       </section>
     </>
