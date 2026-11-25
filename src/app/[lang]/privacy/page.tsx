@@ -1,31 +1,42 @@
-import LegalPage from "@/components/LegalPage";
-import { getDictionary } from "../../dictionaries";
-import { localeAlternates, type Locale } from "@/lib/site";
 import type { Metadata } from "next";
+import type { Locale } from "@/lib/site";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: Locale };
-}): Promise<Metadata> {
-  const dict = await getDictionary(params.lang);
+const EN_URL = "https://cv.paytonpei.top/dogether/privacy";
+const ZH_URL = "https://cv.paytonpei.top/dogether/privacy#zh";
+
+function targetFor(lang: Locale) {
+  return lang === "zh" ? ZH_URL : EN_URL;
+}
+
+export function generateMetadata({ params }: { params: { lang: Locale } }): Metadata {
+  const target = targetFor(params.lang);
   return {
-    title: `${dict.privacy.title} — Dogether`,
-    description: dict.metadata.description,
-    alternates: localeAlternates(params.lang, "/privacy"),
+    title: "Privacy Policy — Dogether",
+    robots: { index: false, follow: false },
+    alternates: { canonical: target },
   };
 }
 
-export default async function PrivacyPage({ params }: { params: { lang: Locale } }) {
-  const dict = await getDictionary(params.lang);
+export default function PrivacyRedirectPage({ params }: { params: { lang: Locale } }) {
+  const target = targetFor(params.lang);
+  const script = `window.location.replace(${JSON.stringify(target)});`;
   return (
-    <LegalPage title={dict.privacy.title} updated={dict.privacy.updated}>
-      {dict.privacy.sections.map((section) => (
-        <section key={section.h}>
-          <h2 className="text-xl font-semibold">{section.h}</h2>
-          <p className="mt-2 text-muted leading-relaxed">{section.p}</p>
-        </section>
-      ))}
-    </LegalPage>
+    <article className="pt-28 pb-20 px-6">
+      <meta httpEquiv="refresh" content={`0; url=${target}`} />
+      <script dangerouslySetInnerHTML={{ __html: script }} />
+      <div className="max-w-2xl mx-auto">
+        {params.lang === "zh" ? (
+          <p className="text-muted leading-relaxed">
+            Dogether 隐私政策已移至{" "}
+            <a href={target} className="text-brand-deep underline underline-offset-4">{target}</a>
+          </p>
+        ) : (
+          <p className="text-muted leading-relaxed">
+            The Dogether privacy policy has moved to{" "}
+            <a href={target} className="text-brand-deep underline underline-offset-4">{target}</a>
+          </p>
+        )}
+      </div>
+    </article>
   );
 }
