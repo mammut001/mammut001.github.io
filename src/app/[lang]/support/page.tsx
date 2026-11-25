@@ -1,34 +1,42 @@
-import LegalPage from "@/components/LegalPage";
-import { getDictionary } from "../../dictionaries";
-import { localeAlternates, type Locale } from "@/lib/site";
 import type { Metadata } from "next";
+import type { Locale } from "@/lib/site";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: Locale };
-}): Promise<Metadata> {
-  const dict = await getDictionary(params.lang);
+const EN_URL = "https://cv.paytonpei.top/dogether/support";
+const ZH_URL = "https://cv.paytonpei.top/dogether/support#zh";
+
+function targetFor(lang: Locale) {
+  return lang === "zh" ? ZH_URL : EN_URL;
+}
+
+export function generateMetadata({ params }: { params: { lang: Locale } }): Metadata {
+  const target = targetFor(params.lang);
   return {
-    title: `${dict.support.title} — Dogether`,
-    description: dict.support.intro,
-    alternates: localeAlternates(params.lang, "/support"),
+    title: "Support — Dogether",
+    robots: { index: false, follow: false },
+    alternates: { canonical: target },
   };
 }
 
-export default async function SupportPage({ params }: { params: { lang: Locale } }) {
-  const dict = await getDictionary(params.lang);
+export default function SupportRedirectPage({ params }: { params: { lang: Locale } }) {
+  const target = targetFor(params.lang);
+  const script = `window.location.replace(${JSON.stringify(target)});`;
   return (
-    <LegalPage title={dict.support.title}>
-      <p className="text-muted leading-relaxed">{dict.support.intro}</p>
-      {dict.support.items.map((item) => (
-        <section key={item.h}>
-          <h2 className="text-xl font-semibold">{item.h}</h2>
-          <p className="mt-2 text-muted leading-relaxed">{item.p}</p>
-        </section>
-      ))}
-      <p className="text-muted leading-relaxed">{dict.support.contact}</p>
-      <a href="https://github.com/mammut001/dogether/issues" className="inline-flex text-brand-deep underline underline-offset-4">{dict.support.contactLink}</a>
-    </LegalPage>
+    <article className="pt-28 pb-20 px-6">
+      <meta httpEquiv="refresh" content={`0; url=${target}`} />
+      <script dangerouslySetInnerHTML={{ __html: script }} />
+      <div className="max-w-2xl mx-auto">
+        {params.lang === "zh" ? (
+          <p className="text-muted leading-relaxed">
+            Dogether 支持页面已移至{" "}
+            <a href={target} className="text-brand-deep underline underline-offset-4">{target}</a>
+          </p>
+        ) : (
+          <p className="text-muted leading-relaxed">
+            The Dogether support page has moved to{" "}
+            <a href={target} className="text-brand-deep underline underline-offset-4">{target}</a>
+          </p>
+        )}
+      </div>
+    </article>
   );
 }

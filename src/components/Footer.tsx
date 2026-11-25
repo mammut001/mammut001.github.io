@@ -32,14 +32,14 @@ export default function Footer({ dict, lang }: { dict: Dictionary["footer"]; lan
           <h2 className="text-xs uppercase tracking-wider text-white/40">{dict.support}</h2>
           <ul className="mt-3 space-y-2 text-sm text-white/70">
             <li>
-              <Link href={`/${lang}/privacy/`} className="hover:text-white">
+              <a href={lang === "zh" ? "https://cv.paytonpei.top/dogether/privacy#zh" : "https://cv.paytonpei.top/dogether/privacy"} className="hover:text-white">
                 {dict.privacy}
-              </Link>
+              </a>
             </li>
             <li>
-              <Link href={`/${lang}/support/`} className="hover:text-white">
+              <a href={lang === "zh" ? "https://cv.paytonpei.top/dogether/support#zh" : "https://cv.paytonpei.top/dogether/support"} className="hover:text-white">
                 {dict.supportLink}
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

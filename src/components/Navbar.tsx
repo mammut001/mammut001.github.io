@@ -49,12 +49,12 @@ export default function Navbar({ dict }: { dict: Dictionary["nav"] }) {
           <button className="px-3 py-2 hover:text-ink" onClick={() => go("how")}>
             {dict.how}
           </button>
-          <Link className="px-3 py-2 hover:text-ink" href={`/${lang}/privacy/`}>
+          <a className="px-3 py-2 hover:text-ink" href={lang === "zh" ? "https://cv.paytonpei.top/dogether/privacy#zh" : "https://cv.paytonpei.top/dogether/privacy"}>
             {dict.privacy}
-          </Link>
-          <Link className="px-3 py-2 hover:text-ink" href={`/${lang}/support/`}>
+          </a>
+          <a className="px-3 py-2 hover:text-ink" href={lang === "zh" ? "https://cv.paytonpei.top/dogether/support#zh" : "https://cv.paytonpei.top/dogether/support"}>
             {dict.support}
-          </Link>
+          </a>
           <LanguageSwitcher />
           <button className="btn-primary ml-2 px-4 py-2 text-sm" onClick={() => go("download")}>
             {dict.download}
@@ -76,12 +76,12 @@ export default function Navbar({ dict }: { dict: Dictionary["nav"] }) {
           <button className="text-left py-2" onClick={() => go("how")}>
             {dict.how}
           </button>
-          <Link className="py-2" href={`/${lang}/privacy/`} onClick={() => setOpen(false)}>
+          <a className="py-2" href={lang === "zh" ? "https://cv.paytonpei.top/dogether/privacy#zh" : "https://cv.paytonpei.top/dogether/privacy"} onClick={() => setOpen(false)}>
             {dict.privacy}
-          </Link>
-          <Link className="py-2" href={`/${lang}/support/`} onClick={() => setOpen(false)}>
+          </a>
+          <a className="py-2" href={lang === "zh" ? "https://cv.paytonpei.top/dogether/support#zh" : "https://cv.paytonpei.top/dogether/support"} onClick={() => setOpen(false)}>
             {dict.support}
-          </Link>
+          </a>
           <LanguageSwitcher />
         </div>
       )}
