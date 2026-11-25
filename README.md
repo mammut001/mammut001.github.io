@@ -1,12 +1,12 @@
 # Dogether website
 
-Marketing site for Dogether, published at https://mammut001.github.io. English and Chinese. Static export via `next build`.
+Old home of the Dogether site. The site now lives at https://cv.paytonpei.top/dogether; every page here redirects to its new address. Static export via `next build`.
 
-- `/en/` and `/zh/` — home
-- `/en/privacy/` and `/zh/privacy/` — privacy policy
-- `/en/support/` and `/zh/support/` — support
-
-App Store download is a placeholder until the listing URL exists. Screenshot slots are placeholders.
+- `/` → https://cv.paytonpei.top/dogether
+- `/en/` and `/zh/` → https://cv.paytonpei.top/dogether/en and /zh
+- `/en/privacy/` and `/zh/privacy/` → https://cv.paytonpei.top/dogether/privacy
+- `/en/support/` and `/zh/support/` → https://cv.paytonpei.top/dogether/support
+- `/qwerty-learner/` → Parlemiao (https://french.paytonpei.top/)
 
 ```bash
 npm install
